@@ -1,0 +1,46 @@
+.productFrame {
+    background-color: lightgray;
+    box-shadow: 3px 3px 10px grey;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+
+.productName {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.productManufacturer {
+    text-align: center;
+    font-size: 14px;
+}
+
+.priceAndTypeContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.productPrice {
+    margin-left: 10px;
+}
+
+.price {
+    font-weight: bold;
+}
+
+.productType {
+    margin-right: 10px;
+}
+
+.colorContainer {
+    display: flex;
+    margin: 10px;
+}
+
+.colorItem {
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+}
