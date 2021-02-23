@@ -18,7 +18,11 @@ const Product = (props) => {
                 Colors: {props.productInfo.color.map(color => <div className="colorItem" style={{'background-color': `${color}`}}></div>)}
             </div>
 
-            {props.availability}
+            Availability:<br/>
+            {props.availability === undefined && <div>Waiting for the information</div>}
+            {props.availability === "instock" && <div className="available">In stock</div>}
+            {props.availability === "outofstock" && <div className="notAvailable">Out of stock</div>}
+            {props.availability === "lessthan10" && <div className="notMany">Less than 10</div>}
 
         </div>
     )

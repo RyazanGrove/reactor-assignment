@@ -15,6 +15,7 @@
 .productManufacturer {
     text-align: center;
     font-size: 14px;
+    border-bottom: 1px solid black;
 }
 
 .priceAndTypeContainer {
@@ -43,4 +44,19 @@
     width: 20px;
     height: 20px;
     margin: 2px;
+}
+
+.available {
+    font-size: 20px;
+    color: green;
+}
+
+.notMany {
+    font-size: 20px;
+    color: yellow;
+}
+
+.notAvailable {
+    font-size: 20px;
+    color: red;
 }
