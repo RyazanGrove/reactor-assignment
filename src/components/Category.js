@@ -1,9 +1,12 @@
 import React from 'react'
 
 const Category = (props) => {
+    const changeCategory= () => {
+        props.changeCategory(props.categoryName.toLowerCase())
+    }
     return(
         <div>
-            <button>{props.categoryName}</button>
+            <button onClick={changeCategory}>{props.categoryName}</button>
         </div>
     )
 }

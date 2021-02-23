@@ -8,16 +8,17 @@ function App() {
 
     const [ products, setProducts ] = useState([])
     const [manufacturers, setManufactorers ] = useState([])
-    const [manufacturersData, setManufacturersData] = useState({})
     const [ dataReceived, setDataReceived] = useState(false)
+    const [category, setCategory] = useState('gloves')
 
-    useEffect(() => {
+    const changeCategory = (categoryName) => {
+        setCategory(categoryName)
         productService
-            .getAllProducts('gloves')
+            .getAllProducts(categoryName)
             .then(response => {
                 let manufacturersArray = []
                 response.data.map(item => {
-                    if(!manufacturersArray.includes(item.manufacturer)){
+                    if (!manufacturersArray.includes(item.manufacturer)) {
                         manufacturersArray = manufacturersArray.concat(item.manufacturer)
                     }
                 })
@@ -26,12 +27,12 @@ function App() {
                 setProducts(response.data)
 
             })
-    }, [])
-
+    }
 
     return (
         <div className="App">
-            <Categories/>
+            <Categories changeCategory={changeCategory}/>
+            Current category: {category}
             <ProductsController products={products} manufacturers={manufacturers} dataReceived={dataReceived}/>
         </div>
     );
