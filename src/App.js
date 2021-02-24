@@ -9,7 +9,7 @@ function App() {
     const [ products, setProducts ] = useState([])
     const [manufacturers, setManufactorers ] = useState([])
     const [ dataReceived, setDataReceived] = useState(false)
-    const [category, setCategory] = useState('gloves')
+    const [category, setCategory] = useState('')
 
     const changeCategory = (categoryName) => {
         setCategory(categoryName)
@@ -27,12 +27,15 @@ function App() {
                 setProducts(response.data)
 
             })
+            .catch(error => {
+                console.log(error)
+            })
     }
 
     return (
         <div className="App">
             <Categories changeCategory={changeCategory}/>
-            Current category: {category}
+            {category !== '' && <div>Current category: {category}</div>}
             <ProductsController products={products} manufacturers={manufacturers} dataReceived={dataReceived}/>
         </div>
     );

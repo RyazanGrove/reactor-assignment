@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import productService from "../services/productService";
 import Product from "./Product";
+import "./productsController.css"
 
 
 const ProductsController = (props) => {
@@ -26,7 +27,7 @@ const ProductsController = (props) => {
     }
 
     return(
-        <div>
+        <div className="productsContainer">
             {props.products.map(product => <Product key={product.id} productInfo={product} availability={availabilityMap.get(product.id)}/>)}
         </div>
     )

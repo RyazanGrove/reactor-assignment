@@ -6,7 +6,7 @@ const Category = (props) => {
     }
     return(
         <div>
-            <button onClick={changeCategory}>{props.categoryName}</button>
+            <button onClick={changeCategory} type="button" class="btn btn-outline-secondary">{props.categoryName}</button>
         </div>
     )
 }
