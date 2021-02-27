@@ -23,6 +23,9 @@ const ProductsController = (props) => {
                         }
                     }
                 })
+                .catch(error => {
+                    console.log(error)
+                })
         })
     }
 
