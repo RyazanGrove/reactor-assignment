@@ -8,19 +8,20 @@
 * [Testing](#testing)
 
 ### Used Versions
+I've used [React](https://reactjs.org/) as a frontend framework.
+
 * React: 17.0.1
 * Node.js: v12.19.0
 * npm: 6.14.8
 
 ### User Interface
-I've used [React](https://reactjs.org/) as a frontend framework.
 
 User chooses one of the category and web-application provides the list of products from selected category.
 ![screenshot](docs/images/mainPage.png)
 
 It takes some time to receive the data, while that "Waiting for the information" will be shown in Availability section of the product.
 
-After receiving information about quantity of products, application updates it. There are three possible values: In stock, Less than 10, Out of stock.
+After receiving information about quantity of the products, application updates it. There are three possible values: In stock, Less than 10, Out of stock.
 ![screenshot](docs/images/differentAvailability.png)
 
 
@@ -42,7 +43,7 @@ The structure of receiving data from first API:
     ...
 ]
 ```
-Next application finds all manufacturers for the certain category and requests the information about availability of the products from second API.
+Next, the application finds all manufacturers for the certain category and requests the information about availability of the products from second API.
 The structure of receiving data from second API:
 ```
 [
@@ -53,7 +54,7 @@ The structure of receiving data from second API:
     ...
 ]
 ```
-After that application updates information about availability of the products.
+After that, application updates information about availability of the products.
 Switching between product categories occurs by choosing a category at the top of the screen.
 
 ### Testing
