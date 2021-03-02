@@ -1,5 +1,8 @@
 # Dashboard for clothing brand warehouses
 
+# Working version
+[`http://35.228.81.77`](http://35.228.81.77)
+
 ### Table of Contents
 * [Used Versions](#used-versions)
 * [User Interface](#user-interface)
